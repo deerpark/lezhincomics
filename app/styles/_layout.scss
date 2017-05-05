@@ -1,0 +1,165 @@
+
+#contents {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row {
+    position: relative;
+    margin: 0 10px;
+    margin-bottom: 35px;
+    
+    .section-header {
+        height: 42px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #ced0db;
+        font-size: 18px;
+        line-height: 42px;
+        h1 {
+            font-weight: 400;
+        }
+    }
+
+    @include mobile {
+        margin-bottom: 30px;
+        margin-left: 0;
+        margin-right: 0;
+    
+        .section-header {
+            height: 32px;
+            margin-bottom: 2px;
+            border-bottom: 0;
+            padding-left: 10px;
+            font-size: 18px;
+            line-height: 32px;
+        }
+    }
+}
+
+.lSSlideOuter, .lSSlideWrapper {
+    height: 100%;
+}
+
+.section-main {
+    margin-bottom: 50px;
+    
+    .section-header {
+        display: none;
+    }
+
+    @include mobile {
+        margin-bottom: 20px;
+    }
+}
+
+    .recommend {
+        padding-bottom: 50%;
+    	position: relative;
+        overflow: hidden;
+    	
+    	.grid {
+    		position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+    	}
+
+        @include mobile {
+
+            .lSSlideOuter {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+
+            .lSSlideWrapper {
+                height: 100%;
+            }
+
+            .grid {
+                height: 100%;
+                position: relative;
+                top: auto;
+                right: auto;
+                bottom: auto;
+                left: auto;
+            }
+        }
+    }
+
+	.collection {
+	    position: absolute;
+	    bottom: 0;
+	    right: 0;
+	    width: 25%;
+	    height: 50%;
+	    box-sizing: border-box;
+        border: 1px solid #000;
+	}
+
+.section-today {
+	clear: left;
+
+    @include mobile {
+
+        .type-compact {
+            display: none;
+        }
+    }
+}
+
+.section-free {
+    
+    .section-header {
+        position: relative;
+        height: auto !important;
+
+        h1 {
+            padding: 34px 0 24px 80px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22px;
+            color: #8fa6c0;
+            background: url('../images/section_free_icon.png') 0 0 no-repeat;
+        }
+
+        .tip {
+            position: absolute;
+            top: 0;
+            left: 80px;
+            font-size: 24px;
+            font-weight: 300;
+            line-height: 34px;
+            color: #000;
+        }
+    }
+
+    @include mobile {
+        padding-top: 25px;
+        padding-bottom: 20px;
+        border-top: 1px solid #d7d8db;
+        border-bottom: 1px solid #d7d8db;
+        background-color: #fff;
+    
+        .section-header {
+
+            h1 {
+                padding: 22px 0 10px 50px;
+                font-size: 14px;
+                line-height: 18px;
+                color: #8f949c;
+                background-size: 40px auto;
+            }
+
+            .tip {
+                left: 50px;
+                font-size: 18px;
+                line-height: 20px;
+            }
+        }
+    }
+}

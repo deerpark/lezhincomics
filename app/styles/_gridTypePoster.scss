@@ -1,0 +1,137 @@
+
+.type-poster {
+    margin-left: -1.66667%;
+    font-size: 0;
+
+    ._item {
+        position: relative;
+        width: 18.321999%;
+        margin-left: 1.66667%;
+        margin-bottom: 1.66667%;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+        ._target {
+            position: relative;
+            display: block;
+            transition: transform 0.3s cubic-bezier(.03,.92,.46,.96);
+
+            &:hover {
+                transform: scale(1.03);
+            }
+        }
+
+        ._new {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 3;
+            display: block;
+            width: 80px;
+            height: 80px;
+            background: url('../images/badge_new.png') 0 0 no-repeat;
+        }
+
+        ._cover {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            padding-bottom: 100%;
+            border: 1px solid #e4e4e4;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+        }
+
+        ._meta {
+            z-index: 5;
+            padding: 15px 10px;
+            border: 1px solid #e4e4e4;
+            border-top: 0;
+            font-size: 12px;
+            line-height: 20px;
+            color: #8f949c;
+            background-color: #fff;
+        }
+
+        ._title {
+            margin-top: -40px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            color: #666;
+        }
+
+        ._genre {
+            margin-top: 20px;
+            font-size: 12px;
+            line-height: 20px;
+            color: #8fa6c0;
+        }
+
+        ._author, ._description {
+            display: inline;
+        }
+
+        @include mobile {
+            min-height: 200px;
+            margin-left: -4px;
+            padding: 5px 0 5px 10px !important;
+
+            ._item {
+                width: 122px !important;
+                margin-left: 4px;
+                margin-bottom: 4px;
+                float: none !important;
+            }
+                ._cover {
+                    width: 120px;
+                    height: 120px;
+                    margin-bottom: 5px;
+                    padding-bottom: 0;
+                    border: 1px solid #ccc;
+                }
+
+                ._new {
+                    width: 40px;
+                    height: 40px;
+                    background: url('../images/badge_new.png') 0 0 no-repeat;
+                    background-size: 100% auto;
+                }
+
+                ._meta {
+                    padding: 0;
+                    border: 0;
+                    font-size: 12px;
+                    line-height: 16px;
+                    color: #999;
+                }
+
+                ._genre {
+                    margin-top: 44px;
+                    font-size: 12px;
+                    line-height: 16px;
+                    color: #8fa6c0;
+                }
+
+                ._title {
+                    margin-top: -56px;
+                    margin-bottom: 0;
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 22px;
+                    color: #333;
+                }
+
+                ._author {
+                    margin-bottom: 36px;
+                    display: block;
+                }
+
+                ._description {
+                    display: none;
+                }
+        }
+}

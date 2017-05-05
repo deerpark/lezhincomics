@@ -1,0 +1,237 @@
+
+.type-mixed {
+    font-size: 0;
+
+    ._item {
+        position: relative;
+        width: 25%;
+        height: 50%;
+        float: left;
+        border: 1px solid #000;
+        box-sizing: border-box;
+
+        &:nth-child(8n) {
+            top: 25%;
+            margin-left: -25%;
+        }
+    }
+
+        ._target {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: block;
+            overflow: hidden;
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 2;
+                background-color: #000;
+                opacity: .0;
+                transition: opacity 0.3s cubic-bezier(.03,.92,.46,.96);
+            }
+
+            &:hover {
+
+                &:after {
+                    opacity: .3;
+                }
+                ._cover {
+                    transform: scale(1.1);
+                }
+                ._meta {
+                    bottom: 5px;
+                }
+            }
+        }
+
+
+        ._new {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 3;
+            display: block;
+            width: 80px;
+            height: 80px;
+            background: url('../images/badge_new.png') 0 0 no-repeat;
+        }
+
+        ._cover {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+            transition: transform 0.3s cubic-bezier(.03,.92,.46,.96);
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-image: linear-gradient(to top, rgba(0,0,0,.4), rgba(0,0,0,.33) 17%, rgba(0,0,0,0));
+            }
+        }
+
+        ._meta {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 5;
+            padding: 20px;
+            color: #fff;
+            line-height: 1.4;
+            transition: bottom 0.3s cubic-bezier(.03,.92,.46,.96);
+        }
+
+        ._author {
+            font-size: 12px;
+            font-weight: 300;
+        }
+
+        ._title {
+            font-size: 20px;
+            font-weight: 400;
+        }
+
+        ._description {
+            font-size: 12px;
+            font-weight: 200;
+            display: none;
+        }
+        
+    .is-wide {
+        width: 50%;
+
+        ._author {
+            font-size: 14px;
+        }
+
+        ._title {
+            font-size: 30px;
+        }
+
+        ._description {
+            display: block;
+        }
+    }
+
+    .is-short {
+        height: 25%;
+    }
+
+    @include tablet {
+
+        ._meta {
+            padding: 15px;
+            line-height: 1.2;
+        }
+
+        ._author {
+            font-size: 11px;
+        }
+
+        ._title {
+            font-size: 14px;
+        }
+
+        ._description {
+            font-size: 10px;
+        }
+        
+        .is-wide {
+
+            ._author {
+                font-size: 12px;
+            }
+
+            ._title {
+                font-size: 18px;
+            }
+
+            ._description {
+                font-size: 11px;
+            }
+        }
+        
+    }
+
+    @include mobile {
+        height: 100% !important;
+        white-space: nowrap;
+
+        .slice {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        ._item {
+            width: 50% !important;
+            height: 50%;
+            float: left;
+            border: 0;
+
+            &:nth-child(8n) {
+                top: auto;
+                margin-left: auto;
+            }
+        }
+
+        ._new {
+            display: none;
+        }
+
+        ._meta {
+            padding: 10px;
+        }
+
+        ._author {
+            font-size: 12px;
+            font-weight: 300;
+        }
+
+        ._title {
+            font-size: 14px;
+            font-weight: 700;
+        }
+        
+        .is-wide {
+
+            ._author {
+                font-size: 12px;
+            }
+
+            ._title {
+                font-size: 14px;
+            }
+
+            ._description {
+                display: none;
+            }
+        }
+
+        .is-short {
+            height: 50%;
+        }
+
+        ._item:nth-child(3n-5) {
+            height: 100%;
+        }
+    }
+}

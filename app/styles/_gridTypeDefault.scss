@@ -1,0 +1,134 @@
+
+.type-default {
+    margin-left: -1.66667%;
+    font-size: 0;
+
+    ._item {
+        position: relative;
+        width: 23.3340%;
+        margin-left: 1.66667%;
+        margin-bottom: 1.66667%;
+        display: inline-block;
+        vertical-align: top;
+        background-color: #fff;
+    }
+
+        ._target {
+            position: relative;
+            display: block;
+            overflow: hidden;
+            transition: transform 0.3s cubic-bezier(.03,.92,.46,.96);
+
+            &:hover {
+                transform: scale(1.03);
+            }
+        }
+
+        ._cover {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            padding-bottom: 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+        }
+
+        ._new {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 3;
+            display: block;
+            width: 80px;
+            height: 80px;
+            background: url('../images/badge_new.png') 0 0 no-repeat;
+        }
+
+        ._meta {
+            z-index: 5;
+            padding: 10px;
+            border: 1px solid #e4e4e4;
+            border-top: 0;
+            font-size: 12px;
+            line-height: 20px;
+            color: #999;
+            background-color: #fff;
+        }
+
+        ._genre {
+            font-size: 12px;
+            line-height: 20px;
+            color: #8188d1;
+        }
+
+        ._title {
+            font-size: 18px;
+            line-height: 28px;
+            color: #333;
+        }
+
+        ._author, ._description {
+            display: inline;
+        }
+
+    @include mobile {
+        margin-left: -4px;
+        padding: 5px 0 5px 10px !important;
+        white-space: nowrap;
+
+        ._item {
+            width: 92px !important;
+            margin-left: 4px;
+            margin-bottom: 4px;
+            background-color: transparent;
+            float: none !important;
+        }
+
+            ._cover {
+                width: 90px;
+                height: 120px;
+                padding-bottom: 0;
+                border: 1px solid #ccc;
+            }
+
+            ._new {
+                width: 40px;
+                height: 40px;
+                background: url('../images/badge_new.png') 0 0 no-repeat;
+                background-size: 100% auto;
+            }
+
+            ._meta {
+                padding: 0;
+                border: 0;
+                font-size: 12px;
+                line-height: 16px;
+                color: #999;
+            }
+
+            ._genre {
+                margin-top: 44px;
+                font-size: 12px;
+                line-height: 16px;
+                color: #8fa6c0;
+            }
+
+            ._title {
+                margin-top: -56px;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 22px;
+                color: #333;
+            }
+
+            ._author {
+                margin-bottom: 16px;
+                display: block;
+            }
+
+            ._description {
+                display: none;
+            }
+    }
+}

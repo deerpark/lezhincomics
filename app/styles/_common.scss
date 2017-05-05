@@ -1,0 +1,15 @@
+
+body {
+    font-family: 'Spoqa Han Sans', 'NanumBarunGothic', 'Sans-serif';
+    color: $color;
+    background: #eff1f4;
+}
+
+a {
+    &:link, &:link * {
+        text-decoration: none;
+    }
+    /* &:hover, &:hover * {
+        text-decoration: underline;
+    } */
+}
