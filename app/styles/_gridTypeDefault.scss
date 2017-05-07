@@ -11,17 +11,18 @@
         display: inline-block;
         vertical-align: top;
         background-color: #fff;
+        transition: all 0.3s cubic-bezier(.03,.92,.46,.96);
+
+        &:hover {
+            transform: translate(0,-3px);
+            box-shadow: 0 2px 20px rgba(0,0,0,.2);
+        }
     }
 
         ._target {
             position: relative;
             display: block;
             overflow: hidden;
-            transition: transform 0.3s cubic-bezier(.03,.92,.46,.96);
-
-            &:hover {
-                transform: scale(1.03);
-            }
         }
 
         ._cover {
@@ -83,6 +84,11 @@
             margin-bottom: 4px;
             background-color: transparent;
             float: none !important;
+
+            &:hover {
+                transform: translate(0,-3px);
+                box-shadow: 0 0 0 rgba(0,0,0,0);
+            }
         }
 
             ._cover {

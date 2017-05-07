@@ -9,16 +9,16 @@
         margin-bottom: 1.66667%;
         display: inline-block;
         vertical-align: top;
+        transition: all 0.3s cubic-bezier(.03,.92,.46,.96);
+
+        &:hover {
+            transform: translate(0,-3px);
+        }
     }
 
         ._target {
             position: relative;
             display: block;
-            transition: transform 0.3s cubic-bezier(.03,.92,.46,.96);
-
-            &:hover {
-                transform: scale(1.03);
-            }
         }
 
         ._new {
@@ -78,6 +78,10 @@
             margin-left: 4px;
             margin-bottom: 4px;
             float: none !important;
+
+            &:hover {
+                transform: translate(0,-3px);
+            }
         }
 
             ._cover {
